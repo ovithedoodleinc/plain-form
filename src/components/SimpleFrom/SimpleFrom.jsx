@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function SimpleFrom() {
+export default function SimpleFrom() {
   const [data, setData] = useState(null);
 
   const handleSubmit = (e) => {
@@ -44,7 +44,7 @@ function SimpleFrom() {
   };
 
   return (
-    <div>
+    <>
       {!data ? (
         <div>
           <h1>Simple Login Form</h1>
@@ -120,8 +120,6 @@ function SimpleFrom() {
           <p>Bevarages: {data.bevarages.join(", ")}</p>
         </div>
       )}
-    </div>
+    </>
   );
 }
-
-export default SimpleFrom;
